@@ -487,6 +487,27 @@ main > section {
   outline-offset: 3px;
 }
 
+/* ---------- top bar (theme + audio toggles) ---------- */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  min-height: 54px;
+}
+
+@media (max-width: 560px) {
+  .top-bar {
+    min-height: 48px;
+  }
+  .theme-toggle,
+  .audio-toggle {
+    position: static;
+    width: 36px;
+    height: 36px;
+  }
+}
+
 /* ---------- theme toggle ---------- */
 .theme-toggle {
   position: fixed;
@@ -898,22 +919,6 @@ body.is-entered .bg-grain {
   .book:hover .book-cover,
   .book:focus-visible .book-cover {
     transform: translateX(0);
-  }
-}
-
-/* ---------- touch devices: no hover, show covers always ---------- */
-@media (hover: none) {
-  .book .book-cover {
-    opacity: 1;
-    transform: translateX(0) rotateY(0);
-    pointer-events: none;
-  }
-  .book {
-    transform: none;
-  }
-  .book:hover,
-  .book:focus-visible {
-    transform: none;
   }
 }
 
