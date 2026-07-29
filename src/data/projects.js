@@ -5,7 +5,7 @@ export const featuredProjects = [
     url: "https://github.com/dyokism/PTBayuBagusBakery",
     description: "B2B supply estimation system and bakery portal built with zero heavy UI frameworks for maximum loading speed and SEO optimization.",
     highlights: [
-      "Custom B2B supply calculation calculator, 14 product catalog with BPOM certification data, and native <dialog> modals.",
+      "Custom B2B supply calculation calculator, 14 product catalog with BPOM certification data, and native HTML dialog modals.",
       "Full SEO optimization with JSON-LD bakery schema markup and WebP assets."
     ],
     tags: [
