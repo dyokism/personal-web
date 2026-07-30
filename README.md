@@ -1,6 +1,6 @@
 # 🪨 Dyokism Portfolio
 
-This is a personal portfolio website built to present projects, technical skills, and software development work in a clear and organized layout. The site features a dark-mode design, smooth mouse spotlight glow effects, and readable typography that helps visitors quickly find relevant information.
+A dark-themed personal portfolio showcasing software projects, technical skills, and system tools.
 
 ---
 
@@ -19,9 +19,9 @@ The website is audited using Google Lighthouse on production preview builds to e
 
 | Category | Mobile Score | Desktop Score | Target Standard |
 |---|---|---|---|
-| Performance | 99 / 100 | 100 / 100 | Fast page loading and zero cumulative layout shifts |
+| Performance | 97 / 100 | 100 / 100 | Fast page loading and zero cumulative layout shifts |
 | Accessibility | 100 / 100 | 100 / 100 | Full WCAG compliance, high contrast, and keyboard focus |
-| Best Practices | 100 / 100 | 100 / 100 | Zero console errors and clean event handling |
+| Best Practices | 96 / 100 | 96 / 100 | Clean event handling and secure resource loading |
 | SEO | 100 / 100 | 100 / 100 | Canonical links, OpenGraph metadata, and JSON-LD schema |
 
 ---
