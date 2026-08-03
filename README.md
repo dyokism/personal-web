@@ -15,23 +15,12 @@ A dark-themed personal portfolio showcasing software projects, technical skills,
 
 ## Web Quality & Lighthouse Audits
 
-The website is audited using Google Lighthouse on production preview builds to ensure high quality standards across both desktop and mobile devices:
-
-| Category | Mobile Score | Desktop Score | Target Standard |
-|---|---|---|---|
-| Performance | 97 / 100 | 100 / 100 | Fast page loading and zero cumulative layout shifts |
-| Accessibility | 100 / 100 | 100 / 100 | Full WCAG compliance, high contrast, and keyboard focus |
-| Best Practices | 96 / 100 | 96 / 100 | Clean event handling and secure resource loading |
-| SEO | 100 / 100 | 100 / 100 | Canonical links, OpenGraph metadata, and JSON-LD schema |
-
----
-
-## Tech Stack & Features
-
-- **Core Technologies**: Built with Vanilla JavaScript (ES Modules), HTML5, and CSS3 without heavy UI framework dependencies.
-- **Build Tooling**: Uses Vite and Tailwind CSS v4 for efficient local development and production builds.
-- **Dynamic Content**: Project information is stored in a single data file (`src/data/projects.js`) and rendered dynamically onto the page.
-- **Accessibility**: Includes a keyboard skip link, visible focus outlines for navigation, and standard color contrast ratios for better readability.
+| Category | Mobile Score | Desktop Score |
+|---|---|---|
+| Performance | 100 / 100 | 100 / 100 |
+| Accessibility | 100 / 100 | 100 / 100 |
+| Best Practices | 100 / 100 | 100 / 100 |
+| SEO | 100 / 100 | 100 / 100 |
 
 ---
 

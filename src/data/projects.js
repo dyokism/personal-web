@@ -14,10 +14,10 @@ export const featuredProjects = [
       "Full SEO optimization with JSON-LD bakery schema markup and WebP assets."
     ],
     tags: [
-      { name: "Vanilla JS", icon: "https://cdn.simpleicons.org/javascript/e4e4e7" },
-      { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/e4e4e7" },
-      { name: "CSS3", icon: "https://cdn.simpleicons.org/css/e4e4e7" },
-      { name: "Vite", icon: "https://cdn.simpleicons.org/vite/e4e4e7" }
+      { name: "Vanilla JS", icon: "/icons/javascript.svg" },
+      { name: "HTML5", icon: "/icons/html5.svg" },
+      { name: "CSS3", icon: "/icons/css.svg" },
+      { name: "Vite", icon: "/icons/vite.svg" }
     ]
   },
   {
@@ -35,9 +35,9 @@ export const featuredProjects = [
       "Atomic bootloop guard (disables module after 3 failed boots) with software Vulkan emulator guard."
     ],
     tags: [
-      { name: "POSIX Bash", icon: "https://cdn.simpleicons.org/gnubash/e4e4e7" },
-      { name: "Vulkan HWUI", icon: "https://cdn.simpleicons.org/vulkan/e4e4e7" },
-      { name: "Android Root", icon: "https://cdn.simpleicons.org/android/e4e4e7" }
+      { name: "POSIX Bash", icon: "/icons/gnubash.svg" },
+      { name: "Vulkan HWUI", icon: "/icons/vulkan.svg" },
+      { name: "Android Root", icon: "/icons/android.svg" }
     ]
   },
   {
@@ -56,9 +56,9 @@ export const featuredProjects = [
       "Interactive volume-key cache purge menu, action button reset, and CLI dry-run test mode."
     ],
     tags: [
-      { name: "POSIX Bash", icon: "https://cdn.simpleicons.org/gnubash/e4e4e7" },
-      { name: "Android ART", icon: "https://cdn.simpleicons.org/android/e4e4e7" },
-      { name: "Android Root", icon: "https://cdn.simpleicons.org/android/e4e4e7" }
+      { name: "POSIX Bash", icon: "/icons/gnubash.svg" },
+      { name: "Android ART", icon: "/icons/android.svg" },
+      { name: "Android Root", icon: "/icons/android.svg" }
     ]
   }
 ];

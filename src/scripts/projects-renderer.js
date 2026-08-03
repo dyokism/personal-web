@@ -4,7 +4,7 @@ export function renderProjects() {
   const container = document.getElementById('projects-list');
   if (!container || container.children.length > 0) return;
 
-  const html = featuredProjects.map(project => `
+  const html = featuredProjects.map((project, index) => `
     <div class="spotlight-card group relative flex flex-col rounded-xl border border-[#27272a] bg-[#121215] p-4 sm:p-5 transition-all duration-200 hover:-translate-y-1 hover:border-[#a1a1aa] hover:shadow-lg hover:shadow-white/5">
       ${project.image ? `
         <div class="relative aspect-[2/1] w-full overflow-hidden rounded-lg border border-[#27272a] bg-[#18181b]">
@@ -13,7 +13,9 @@ export function renderProjects() {
             alt="${project.imageAlt || ''}"
             width="800"
             height="400"
-            loading="lazy"
+            loading="${index === 0 ? 'eager' : 'lazy'}"
+            ${index === 0 ? 'fetchpriority="high"' : ''}
+            decoding="${index === 0 ? 'sync' : 'async'}"
             class="h-full w-full object-cover ${project.imageFit || 'object-center'}"
           />
         </div>
@@ -70,26 +72,30 @@ export function renderProjects() {
   fetchLiveStars(container);
 }
 
-// Concurrently fetch live stargazers count from GitHub API with silent fallback on network error/rate-limit
+// Concurrently fetch live stargazers count after initial render to avoid blocking main thread
 function fetchLiveStars(container) {
-  const elements = Array.from(container.querySelectorAll('[data-repo]'));
-  if (elements.length === 0) return;
+  const schedule = window.requestIdleCallback
+    ? (cb) => requestIdleCallback(cb, { timeout: 2000 })
+    : (cb) => setTimeout(cb, 1000);
 
-  const fetches = elements.map(async (el) => {
-    const repo = el.getAttribute('data-repo');
-    if (!repo) return;
+  schedule(() => {
+    const elements = Array.from(container.querySelectorAll('[data-repo]'));
+    if (elements.length === 0) return;
 
-    try {
-      const res = await fetch(`https://api.github.com/repos/${repo}`);
-      if (!res.ok) return;
-      const data = await res.json();
-      if (typeof data.stargazers_count === 'number') {
-        el.textContent = data.stargazers_count;
+    elements.forEach(async (el) => {
+      const repo = el.getAttribute('data-repo');
+      if (!repo) return;
+
+      try {
+        const res = await fetch(`https://api.github.com/repos/${repo}`);
+        if (!res.ok) return;
+        const data = await res.json();
+        if (typeof data.stargazers_count === 'number') {
+          el.textContent = data.stargazers_count;
+        }
+      } catch {
+        // Retain pre-rendered static star count if API request fails
       }
-    } catch {
-      // Retain pre-rendered static star count if API request fails
-    }
+    });
   });
-
-  Promise.allSettled(fetches);
 }
