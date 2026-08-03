@@ -1,19 +1,16 @@
-# 🪨 Dyokism Portfolio
+<h1 align="center">🪨 Dyokism Portfolio</h1>
 
-A dark-themed personal portfolio showcasing software projects, technical skills, and system tools.
+<p align="center">
+  A dark-themed personal portfolio showcasing software projects, technical skills, and system tools.
+</p>
 
----
+<br />
 
-## Design & Visuals
+<div align="center">
+  <img src="public/demo.gif" alt="Dyokism Portfolio Demo" width="90%" />
+</div>
 
-- **Dark Theme**: A deep dark color palette (#09090b background with zinc text accents) chosen to keep visual distraction low and make content easy to read.
-- **Mouse Spotlight**: A subtle radial light effect that follows mouse movement around the page.
-- **Typography**: Uses Outfit for body text and main headings, combined with JetBrains Mono for code snippets and technical tags.
-- **Responsive Layout**: A two-column structure on desktop screens, featuring a fixed navigation header on the left and a scrollable content area on the right.
-
----
-
-## Web Quality & Lighthouse Audits
+## Lighthouse Audits
 
 | Category | Mobile Score | Desktop Score |
 |---|---|---|
@@ -21,8 +18,6 @@ A dark-themed personal portfolio showcasing software projects, technical skills,
 | Accessibility | 100 / 100 | 100 / 100 |
 | Best Practices | 100 / 100 | 100 / 100 |
 | SEO | 100 / 100 | 100 / 100 |
-
----
 
 ## Local Development
 
@@ -40,7 +35,9 @@ npm run build
 npm run preview
 ```
 
----
+## Acknowledgments
+
+Design and layout inspired by [Brittany Chiang](https://brittanychiang.com).
 
 ## License
 
