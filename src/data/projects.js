@@ -8,10 +8,10 @@ export const featuredProjects = [
     image: "/projects/bayubagusbakery.webp",
     imageAlt: "Preview screenshot of PT Bayu Bagus Bakery B2B web application portal",
     imageFit: "object-top",
-    description: "B2B supply estimation system and bakery portal built with zero heavy UI frameworks for maximum loading speed and SEO optimization.",
+    description: "A B2B web application and supply estimator built for my father's bakery business in Nganjuk, East Java. He wasn't tech-savvy, so I built the web portal, configured the product catalog, and set up Google Maps indexing to digitize his daily wholesale operations.",
     highlights: [
-      "Custom B2B supply calculation calculator, 14 product catalog with BPOM certification data, and native HTML dialog modals.",
-      "Full SEO optimization with JSON-LD bakery schema markup and WebP assets."
+      "Features an interactive B2B supply order calculator, 14 BPOM-certified items, and native modal dialogs.",
+      "Built with Vanilla JS and HTML5, optimized with JSON-LD schema markup and WebP assets for search visibility."
     ],
     tags: [
       { name: "Vanilla JS", icon: "/icons/javascript.svg" },
@@ -29,10 +29,10 @@ export const featuredProjects = [
     image: "/projects/skiavk.webp",
     imageAlt: "Preview banner of SkiaVK Vulkan HWUI renderer Android root module",
     imageFit: "object-center",
-    description: "Android root module that forces Skia Vulkan HWUI rendering for lower animation latency and smoother UI performance.",
+    description: "An Android root module built to simplify Vulkan UI rendering. Most existing scripts were clunky or ADB-only, so I created a module to switch system UI rendering from OpenGL to Vulkan safely.",
     highlights: [
-      "Replaces OpenGL rendering pipeline with Vulkan via skiavk HWUI renderer and optional RenderEngine backend.",
-      "Atomic bootloop guard (disables module after 3 failed boots) with software Vulkan emulator guard."
+      "Forces Vulkan HWUI rendering for smoother UI animations across Android.",
+      "Includes an automatic bootloop guard that disables the module if the device fails to boot three times."
     ],
     tags: [
       { name: "POSIX Bash", icon: "/icons/gnubash.svg" },
@@ -49,11 +49,11 @@ export const featuredProjects = [
     image: "/projects/dexforge.webp",
     imageAlt: "Preview banner of DexForge Android DEX/ART compilation optimizer module",
     imageFit: "object-center",
-    description: "Hardware-aware Android DEX/ART compilation optimizer module with dynamic RAM capacity and app usage profiling.",
+    description: "An Android compilation optimizer created to save users from typing long shell commands in Termux. It automates Dalvik ART compilation customized to the device's RAM capacity and hardware specs.",
     highlights: [
-      "Dynamic compilation profiles (speed, speed-profile, verify) tailored for flagship, mid-range, and entry-level devices.",
-      "Built-in safety guards for low storage (under 512MB), low battery (under 15%), and CPU core affinity regulation.",
-      "Interactive volume-key cache purge menu, action button reset, and CLI dry-run test mode."
+      "Applies compilation profiles (speed, speed-profile, verify) matching entry-level, mid-range, or flagship specs.",
+      "Safety checks pause optimization if free storage drops below 512MB or battery falls below 15%.",
+      "Features a volume-key boot menu to purge cache or reset settings without needing a PC."
     ],
     tags: [
       { name: "POSIX Bash", icon: "/icons/gnubash.svg" },
