@@ -1,5 +1,8 @@
 // Maintains a lerp animation loop for fluid background spotlight movement and updates card border coordinates on hover.
 export function initSpotlight() {
+  const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (!hasFinePointer) return;
+
   const spotlight = document.getElementById('spotlight');
   if (!spotlight) return;
 

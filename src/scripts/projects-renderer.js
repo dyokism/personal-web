@@ -72,6 +72,8 @@ export function renderProjects() {
   fetchLiveStars(container);
 }
 
+const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour cache duration
+
 // Concurrently fetch live stargazers count after initial render to avoid blocking main thread
 function fetchLiveStars(container) {
   const schedule = window.requestIdleCallback
@@ -86,12 +88,34 @@ function fetchLiveStars(container) {
       const repo = el.getAttribute('data-repo');
       if (!repo) return;
 
+      const cacheKey = `gh_stars_${repo}`;
+      try {
+        const cached = localStorage.getItem(cacheKey);
+        if (cached) {
+          const { count, timestamp } = JSON.parse(cached);
+          if (Date.now() - timestamp < CACHE_TTL_MS && typeof count === 'number') {
+            el.textContent = count;
+            return;
+          }
+        }
+      } catch {
+        // Fallback to fetch if localStorage is restricted
+      }
+
       try {
         const res = await fetch(`https://api.github.com/repos/${repo}`);
         if (!res.ok) return;
         const data = await res.json();
         if (typeof data.stargazers_count === 'number') {
           el.textContent = data.stargazers_count;
+          try {
+            localStorage.setItem(cacheKey, JSON.stringify({
+              count: data.stargazers_count,
+              timestamp: Date.now()
+            }));
+          } catch {
+            // Ignore storage quota limits
+          }
         }
       } catch {
         // Retain pre-rendered static star count if API request fails
