@@ -1,3 +1,25 @@
+/**
+ * @typedef {Object} Tag
+ * @property {string} name
+ * @property {string} icon
+ */
+
+/**
+ * @typedef {Object} Project
+ * @property {string} id
+ * @property {string} title
+ * @property {string} url
+ * @property {string} [repo]
+ * @property {number} [stars]
+ * @property {string} [image]
+ * @property {string} [imageAlt]
+ * @property {string} [imageFit]
+ * @property {string} description
+ * @property {string[]} highlights
+ * @property {Tag[]} tags
+ */
+
+/** @type {Project[]} */
 export const featuredProjects = [
   {
     id: "bayubagusbakery",

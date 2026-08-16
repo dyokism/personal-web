@@ -16,7 +16,13 @@ export function initScrollObserver() {
       if (entry.isIntersecting) {
         const targetHash = `#${entry.target.id}`;
         navLinks.forEach((link) => {
-          link.classList.toggle('active', link.getAttribute('href') === targetHash);
+          const isActive = link.getAttribute('href') === targetHash;
+          link.classList.toggle('active', isActive);
+          if (isActive) {
+            link.setAttribute('aria-current', 'true');
+          } else {
+            link.removeAttribute('aria-current');
+          }
         });
       }
     });

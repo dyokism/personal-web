@@ -2,6 +2,7 @@
 export function initSpotlight() {
   const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   if (!hasFinePointer) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const spotlight = document.getElementById('spotlight');
   if (!spotlight) return;
