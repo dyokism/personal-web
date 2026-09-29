@@ -1,33 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dyokism | Portfolio</title>
-  <meta name="description" content="Portfolio of Dyokism - Information Systems Student specializing in web application development, Vanilla JS, and lightweight system tools.">
+  <title>Dyokism | Systems &amp; Native Web Developer</title>
+  <meta name="description" content="Portfolio of Dyokism - Systems &amp; Native Web Developer specializing in Linux system tooling, Android root internals, and zero-framework web applications.">
   <meta name="theme-color" content="#09090b">
   <link rel="canonical" href="https://dyok.vercel.app/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪨</text></svg>">
 
-  <meta property="og:title" content="Dyokism | Portfolio">
-  <meta property="og:description" content="Portfolio of Dyokism - Information Systems Student specializing in web application development, Vanilla JS, and lightweight system tools.">
+  <meta property="og:title" content="Dyokism | Systems &amp; Native Web Developer">
+  <meta property="og:description" content="Systems &amp; Native Web Developer specializing in Linux system tooling, Android root internals, and zero-framework web applications.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://dyok.vercel.app/">
   <meta property="og:image" content="https://dyok.vercel.app/demo.webp">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dyokism | Portfolio">
-  <meta name="twitter:description" content="Portfolio of Dyokism - Information Systems Student specializing in web application development, Vanilla JS, and lightweight system tools.">
+  <meta name="twitter:title" content="Dyokism | Systems &amp; Native Web Developer">
+  <meta name="twitter:description" content="Systems &amp; Native Web Developer specializing in Linux system tooling, Android root internals, and zero-framework web applications.">
   <meta name="twitter:image" content="https://dyok.vercel.app/demo.webp">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap">
-  </noscript>
-  
   <link rel="stylesheet" href="/src/styles/main.css">
 
   <script type="application/ld+json">
@@ -35,195 +27,182 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Dyokism",
-    "jobTitle": "Information Systems Student",
+    "jobTitle": "Systems & Native Web Developer",
     "url": "https://dyok.vercel.app/",
     "sameAs": [
       "https://github.com/dyokism"
     ],
     "knowsAbout": [
-      "Web Development",
-      "JavaScript",
+      "Linux System Scripting",
+      "Android Runtime Internals",
+      "Dalvik/ART Compilation",
+      "Vulkan HWUI",
+      "POSIX Bash",
+      "Vanilla JavaScript",
       "HTML5",
       "CSS3",
-      "Vite",
-      "POSIX Bash",
-      "Linux",
-      "Android"
+      "TypeScript",
+      "Vite"
     ]
   }
   </script>
 </head>
-<body class="bg-[#09090b] text-[#a1a1aa] font-sans antialiased selection:bg-white/20 selection:text-[#f8fafc] relative min-h-[100dvh]">
+<body>
 
-  <a href="#content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#18181b] focus:text-white focus:rounded-md focus:border focus:border-white">
-    Skip to main content
-  </a>
+  <a href="#content" class="skip-link">Skip to main content</a>
 
-  <div id="spotlight" class="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"></div>
+  <div class="layout-container">
+    <header class="sidebar">
+      <div>
+        <h1 class="hero-name">
+          <a href="#about">Dyokism</a>
+        </h1>
+        <h2 class="hero-role">Systems &amp; Native Web Developer</h2>
+        <p class="hero-tagline">
+          Building lightweight system tools and zero-framework web applications.
+        </p>
 
-  <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
-    <div class="lg:flex lg:justify-between lg:gap-16">
+        <nav class="nav" aria-label="In-page jump links">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link active" href="#about" aria-current="true">
+                <span class="nav-indicator"></span>
+                <span class="nav-text">About</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#skills">
+                <span class="nav-indicator"></span>
+                <span class="nav-text">Capabilities</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#projects">
+                <span class="nav-indicator"></span>
+                <span class="nav-text">Projects</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="#contact">
+                <span class="nav-indicator"></span>
+                <span class="nav-text">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-      <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
-        <div>
-          <h1 class="text-4xl font-bold tracking-tight text-[#f8fafc] sm:text-5xl">
-            <a href="#about">Dyokism</a>
-          </h1>
-          <h2 class="mt-3 text-lg font-medium tracking-tight text-[#e4e4e7] sm:text-xl">
-            Information Systems Student
-          </h2>
-          <p class="mt-4 max-w-xs leading-normal text-[#a1a1aa]">
-            Building web applications and lightweight system tools.
+      <ul class="social-list" aria-label="Social media links">
+        <li>
+          <a class="social-link" href="https://github.com/dyokism" target="_blank" rel="noreferrer noopener">
+            <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>github.com/dyokism</span>
+            <span class="sr-only">(opens in a new tab)</span>
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <main id="content" class="main-content" tabindex="-1">
+
+      <section id="about" class="section" aria-label="About me">
+        <div class="mobile-section-header">
+          <h2>About</h2>
+        </div>
+        <div class="about-text">
+          <p>
+            I am an Information Systems student based in Surabaya, Indonesia, working across systems tooling and native web interfaces. I build web applications with zero-framework Vanilla JavaScript, HTML, and CSS, and write system-level automation for Linux and Android environments.
           </p>
+          <p>
+            On the systems side, I maintain root-level tooling like <strong>SkiaVK</strong> (Vulkan HWUI pipeline redirection) and <strong>DexForge</strong> (automated Dalvik/ART compilation daemon). On the web side, I build fast, accessible applications with clean semantic markup and zero runtime bundle overhead.
+          </p>
+          <p>
+            I avoid heavy frameworks when native browser APIs solve the problem with zero dependencies, lower memory footprints, and faster load times.
+          </p>
+        </div>
+      </section>
 
-          <nav class="nav hidden lg:block" aria-label="In-page jump links">
-            <ul class="mt-16 w-max space-y-4">
-              <li>
-                <a class="group flex items-center py-1 active" href="#about" aria-current="true">
-                  <span class="nav-indicator mr-4 h-px w-8 bg-[#27272a] transition-all group-hover:w-16 group-hover:bg-white group-focus-visible:w-16 group-focus-visible:bg-white motion-reduce:transition-none"></span>
-                  <span class="nav-text text-xs font-bold uppercase tracking-widest text-[#a1a1aa] group-hover:text-[#f8fafc] group-focus-visible:text-[#f8fafc]">About</span>
-                </a>
-              </li>
-              <li>
-                <a class="group flex items-center py-1" href="#skills">
-                  <span class="nav-indicator mr-4 h-px w-8 bg-[#27272a] transition-all group-hover:w-16 group-hover:bg-white group-focus-visible:w-16 group-focus-visible:bg-white motion-reduce:transition-none"></span>
-                  <span class="nav-text text-xs font-bold uppercase tracking-widest text-[#a1a1aa] group-hover:text-[#f8fafc] group-focus-visible:text-[#f8fafc]">Skills</span>
-                </a>
-              </li>
-              <li>
-                <a class="group flex items-center py-1" href="#projects">
-                  <span class="nav-indicator mr-4 h-px w-8 bg-[#27272a] transition-all group-hover:w-16 group-hover:bg-white group-focus-visible:w-16 group-focus-visible:bg-white motion-reduce:transition-none"></span>
-                  <span class="nav-text text-xs font-bold uppercase tracking-widest text-[#a1a1aa] group-hover:text-[#f8fafc] group-focus-visible:text-[#f8fafc]">Projects</span>
-                </a>
-              </li>
-              <li>
-                <a class="group flex items-center py-1" href="#contact">
-                  <span class="nav-indicator mr-4 h-px w-8 bg-[#27272a] transition-all group-hover:w-16 group-hover:bg-white group-focus-visible:w-16 group-focus-visible:bg-white motion-reduce:transition-none"></span>
-                  <span class="nav-text text-xs font-bold uppercase tracking-widest text-[#a1a1aa] group-hover:text-[#f8fafc] group-focus-visible:text-[#f8fafc]">Contact</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+      <section id="skills" class="section" aria-label="Skills and Technical Capabilities">
+        <div class="mobile-section-header">
+          <h2>Capabilities</h2>
         </div>
 
-        <ul class="ml-1 mt-8 flex items-center gap-5" aria-label="Social media links">
-          <li>
-            <a class="flex items-center gap-2 text-xs font-mono text-[#a1a1aa] transition hover:text-white focus-visible:text-white" href="https://github.com/dyokism" target="_blank" rel="noreferrer noopener">
-              <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-              </svg>
-              <span>github.com/dyokism</span>
-              <span class="sr-only">(opens in a new tab)</span>
-            </a>
-          </li>
-        </ul>
-      </header>
-
-      <main id="content" class="pt-24 lg:w-1/2 lg:py-24">
-
-        <section id="about" class="mb-12 scroll-mt-16 md:mb-16 lg:mb-24 lg:scroll-mt-24" aria-label="About me">
-          <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-4 backdrop-blur-md bg-[#09090b]/75 sm:px-12 md:-mx-12 lg:sr-only lg:relative lg:top-auto lg:mx-0 lg:w-auto lg:p-0 lg:bg-transparent lg:backdrop-blur-none">
-            <h2 class="text-sm font-bold uppercase tracking-widest text-[#f8fafc]">About</h2>
-          </div>
-          <div class="space-y-4 text-sm leading-relaxed text-[#a1a1aa]">
-            <p>
-              I am an Information Systems student in Surabaya, Indonesia, specializing in frontend web development. I build web applications using Vanilla JavaScript, HTML, and CSS, and recently deployed a B2B ordering portal to digitize a bakery's wholesale operations.
-            </p>
-            <p>
-              I also have a background in Linux system scripting and Android root development, where I build tools like <strong class="font-semibold text-[#f8fafc]">SkiaVK</strong> and <strong class="font-semibold text-[#f8fafc]">DexForge</strong>. 
-            </p>
-            <p>
-              I prefer native web technologies over heavy frameworks because they load faster and run smoother.
-            </p>
-          </div>
-        </section>
-
-        <section id="skills" class="mb-12 scroll-mt-16 md:mb-16 lg:mb-24 lg:scroll-mt-24" aria-label="Skills and Technologies">
-          <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-4 backdrop-blur-md bg-[#09090b]/75 sm:px-12 md:-mx-12 lg:sr-only lg:relative lg:top-auto lg:mx-0 lg:w-auto lg:p-0 lg:bg-transparent lg:backdrop-blur-none">
-            <h2 class="text-sm font-bold uppercase tracking-widest text-[#f8fafc]">Skills</h2>
+        <div class="skills-grid">
+          <div class="card capability-card">
+            <h3 class="capability-title">Systems &amp; Runtime</h3>
+            <ul class="capability-list">
+              <li class="capability-item">
+                <span class="capability-name">Dalvik / ART Compilation Daemon</span>
+                <span class="capability-detail">Automated profile-guided AOT compilation driven by hardware specs and battery state.</span>
+              </li>
+              <li class="capability-item">
+                <span class="capability-name">Vulkan HWUI Rendering</span>
+                <span class="capability-detail">Pipeline configuration redirecting Android system graphics rendering from OpenGL to Vulkan.</span>
+              </li>
+              <li class="capability-item">
+                <span class="capability-name">3-Strike Bootloop Fallback</span>
+                <span class="capability-detail">Fail-safe boot tracking mechanism that disables modules upon consecutive boot failures.</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="space-y-6">
-            <div class="spotlight-card rounded-lg border border-[#27272a] bg-[#121215] p-5 transition duration-200 hover:border-[#a1a1aa]/50">
-              <h3 class="text-xs font-bold uppercase tracking-wider text-[#e4e4e7] font-mono mb-3">Web Development & Frontend</h3>
-              <ul class="flex flex-wrap gap-2 font-mono text-xs text-[#e4e4e7]">
-                <li class="inline-flex items-center gap-1.5 rounded border border-[#27272a] bg-[#18181b] px-2.5 py-1">
-                  <img src="/icons/javascript.svg" class="h-3.5 w-3.5" width="14" height="14" loading="lazy" alt="" aria-hidden="true">
-                  <span>JavaScript</span>
-                </li>
-                <li class="inline-flex items-center gap-1.5 rounded border border-[#27272a] bg-[#18181b] px-2.5 py-1">
-                  <img src="/icons/html5.svg" class="h-3.5 w-3.5" width="14" height="14" loading="lazy" alt="" aria-hidden="true">
-                  <span>HTML</span>
-                </li>
-                <li class="inline-flex items-center gap-1.5 rounded border border-[#27272a] bg-[#18181b] px-2.5 py-1">
-                  <img src="/icons/css.svg" class="h-3.5 w-3.5" width="14" height="14" loading="lazy" alt="" aria-hidden="true">
-                  <span>CSS</span>
-                </li>
-                <li class="inline-flex items-center gap-1.5 rounded border border-[#27272a] bg-[#18181b] px-2.5 py-1">
-                  <img src="/icons/vite.svg" class="h-3.5 w-3.5" width="14" height="14" loading="lazy" alt="" aria-hidden="true">
-                  <span>Vite</span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="spotlight-card rounded-lg border border-[#27272a] bg-[#121215] p-5 transition duration-200 hover:border-[#a1a1aa]/50">
-              <h3 class="text-xs font-bold uppercase tracking-wider text-[#e4e4e7] font-mono mb-3">Systems & Scripting</h3>
-              <ul class="flex flex-wrap gap-2 font-mono text-xs text-[#e4e4e7]">
-                <li class="inline-flex items-center gap-1.5 rounded border border-[#27272a] bg-[#18181b] px-2.5 py-1">
-                  <img src="/icons/gnubash.svg" class="h-3.5 w-3.5" width="14" height="14" loading="lazy" alt="" aria-hidden="true">
-                  <span>POSIX Bash</span>
-                </li>
-                <li class="inline-flex items-center gap-1.5 rounded border border-[#27272a] bg-[#18181b] px-2.5 py-1">
-                  <img src="/icons/python.svg" class="h-3.5 w-3.5" width="14" height="14" loading="lazy" alt="" aria-hidden="true">
-                  <span>Python</span>
-                </li>
-                <li class="inline-flex items-center gap-1.5 rounded border border-[#27272a] bg-[#18181b] px-2.5 py-1">
-                  <img src="/icons/android.svg" class="h-3.5 w-3.5" width="14" height="14" loading="lazy" alt="" aria-hidden="true">
-                  <span>Android Root Frameworks</span>
-                </li>
-              </ul>
-            </div>
+          <div class="card capability-card">
+            <h3 class="capability-title">Web Systems &amp; Architecture</h3>
+            <ul class="capability-list">
+              <li class="capability-item">
+                <span class="capability-name">Zero-Framework Web Applications</span>
+                <span class="capability-detail">Native DOM, modern CSS, and typed TypeScript with zero client-side framework runtime overhead.</span>
+              </li>
+              <li class="capability-item">
+                <span class="capability-name">Build-Time Static Pre-rendering</span>
+                <span class="capability-detail">Build-time HTML injection via Vite hooks for instant FCP, full SEO crawlability, and zero hydration lag.</span>
+              </li>
+              <li class="capability-item">
+                <span class="capability-name">WCAG 2.2 AA Accessibility</span>
+                <span class="capability-detail">Accessible semantic landmarks, keyboard navigation patterns, focus states, and high color contrast.</span>
+              </li>
+            </ul>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="projects" class="mb-12 scroll-mt-16 md:mb-16 lg:mb-24 lg:scroll-mt-24" aria-label="Featured projects">
-          <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-4 backdrop-blur-md bg-[#09090b]/75 sm:px-12 md:-mx-12 lg:sr-only lg:relative lg:top-auto lg:mx-0 lg:w-auto lg:p-0 lg:bg-transparent lg:backdrop-blur-none">
-            <h2 class="text-sm font-bold uppercase tracking-widest text-[#f8fafc]">Projects</h2>
-          </div>
+      <section id="projects" class="section" aria-label="Featured projects">
+        <div class="mobile-section-header">
+          <h2>Projects</h2>
+        </div>
 
-          <div id="projects-list" class="space-y-8"></div>
-        </section>
+        <div id="projects-list" class="projects-list"></div>
+      </section>
 
-        <section id="contact" class="mb-12 scroll-mt-16 md:mb-16 lg:mb-24 lg:scroll-mt-24" aria-label="Contact information">
-          <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-4 backdrop-blur-md bg-[#09090b]/75 sm:px-12 md:-mx-12 lg:sr-only lg:relative lg:top-auto lg:mx-0 lg:w-auto lg:p-0 lg:bg-transparent lg:backdrop-blur-none">
-            <h2 class="text-sm font-bold uppercase tracking-widest text-[#f8fafc]">Contact</h2>
-          </div>
+      <section id="contact" class="section" aria-label="Contact information">
+        <div class="mobile-section-header">
+          <h2>Contact</h2>
+        </div>
 
-          <div class="spotlight-card rounded-xl border border-[#27272a] bg-[#121215] p-5 sm:p-8 text-center transition hover:border-[#a1a1aa]/50">
-            <h3 class="text-xl font-bold text-[#f8fafc]">Get in touch</h3>
-            <p class="mt-3 text-xs leading-relaxed text-[#a1a1aa]">
-              Reach out if you want to discuss web development, client projects, or collaborations.
-            </p>
-
-            <a id="email-btn" href="#" data-user="diokhomeini101" data-domain="gmail.com" class="mt-6 inline-flex max-w-full items-center gap-2 rounded-lg border border-[#3f3f46] bg-[#18181b] px-3.5 py-3 sm:px-6 font-mono text-[10px] sm:text-xs font-medium text-white transition duration-200 hover:border-[#a1a1aa] hover:bg-[#27272a] hover:shadow-md hover:shadow-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-              <svg class="h-4 w-4 shrink-0 text-[#e4e4e7]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-              </svg>
-              <span class="truncate">diokhomeini101 [at] gmail [dot] com</span>
-            </a>
-          </div>
-        </section>
-
-        <footer class="text-xs text-[#a1a1aa] pb-16">
-          <p>
-            Built with Vanilla JS, HTML, CSS, and Vite.
+        <div class="card contact-card">
+          <h3 class="contact-title">Get in touch</h3>
+          <p class="contact-desc">
+            Reach out if you want to discuss systems tooling, native web development, or client projects.
           </p>
-        </footer>
 
-      </main>
-    </div>
+          <a id="email-btn" href="#" data-user="diokhomeini101" data-domain="gmail.com" class="email-btn">
+            <svg class="email-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2 2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <span class="email-text">diokhomeini101 [at] gmail [dot] com</span>
+          </a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Built with TypeScript, HTML, Native CSS, and Vite.</p>
+      </footer>
+
+    </main>
   </div>
 
-  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

@@ -1,44 +1,49 @@
-<h1 align="center">🪨 Dyokism Portfolio</h1>
-
-<p align="center">
-  A dark-themed personal portfolio showcasing software projects, technical skills, and system tools.
-</p>
-
-<br />
-
 <div align="center">
-  <img src="public/demo.gif" alt="Dyokism Portfolio Demo" width="90%" />
+  <h1>🪨 Dyokism Portfolio</h1>
+  <p><em>Lightweight personal portfolio for Linux/Android systems tooling and native web applications.</em></p>
+
+  <p>
+    <a href="https://bun.sh"><img src="https://img.shields.io/badge/Bun-%23000000.svg?style=flat&logo=bun&logoColor=white" alt="Bun"></a>
+    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white" alt="TypeScript"></a>
+    <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white" alt="Vite"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  </p>
+
+  <p>
+    <a href="#features">Features</a> • <a href="#installation">Installation</a> • <a href="#usage">Usage</a>
+  </p>
 </div>
 
-## Lighthouse Audits
+A minimalist, zero-framework personal portfolio highlighting Linux/Android systems tooling and native web applications. Built with pure modern CSS, strict TypeScript, and self-hosted variable typography.
 
-| Category | Mobile Score | Desktop Score |
-|---|---|---|
-| Performance | 100 / 100 | 100 / 100 |
-| Accessibility | 100 / 100 | 100 / 100 |
-| Best Practices | 100 / 100 | 100 / 100 |
-| SEO | 100 / 100 | 100 / 100 |
+## Features
+- **Zero CSS Framework** - Pure native CSS using custom properties, CSS Grid, and responsive layout without Tailwind runtime dependencies.
+- **Strict TypeScript** - Strongly typed data structures, DOM observers, and build plugins.
+- **Build-Time Static Pre-rendering** - Injects project data directly into static HTML for zero hydration latency and search crawlability.
+- **Self-Hosted Typography** - Variable `.woff2` font files for Outfit and JetBrains Mono with zero external CDN requests.
+- **Accessible Standards** - WCAG 2.2 AA compliant with semantic landmarks, keyboard navigation, and high color contrast.
 
-## Local Development
-
+## Installation
 ```bash
+# Clone the repository
+git clone https://github.com/dyokism/portfolio.git
+cd portfolio
+
 # Install dependencies
 npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
 ```
 
-## Acknowledgments
+## Usage
+```bash
+# Start local development server
+npm run dev
 
-Design and layout inspired by [Brittany Chiang](https://brittanychiang.com).
+# Run typecheck
+npm run typecheck
 
-## License
+# Build production bundle
+npm run build
 
-This project is licensed under the [MIT License](LICENSE).
+# Preview production build locally
+npm run preview
+```
