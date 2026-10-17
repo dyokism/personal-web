@@ -1,10 +1,10 @@
 <div align="center">
-  <img src="public/demo.webp" width="96" alt="Dyokism Portfolio">
+  <h1>🪨 Dyokism Portfolio</h1>
+  <p><em>Minimalist personal developer portfolio with build-time HTML pre-rendering.</em></p>
 
-  # Dyokism Portfolio
-  *Minimalist personal developer portfolio with build-time HTML pre-rendering.*
-
-  [Features](#features) • [Installation](#installation) • [Usage](#usage)
+  <p>
+    <a href="#features">Features</a> • <a href="#installation">Installation</a> • <a href="#usage">Usage</a>
+  </p>
 </div>
 
 A lightweight developer portfolio built with HTML, Tailwind CSS, TypeScript, and Vite. It pre-renders project cards and live GitHub star counts into static HTML during build, eliminating layout shift and third-party rate limits.
