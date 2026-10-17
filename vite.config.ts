@@ -1,4 +1,5 @@
 import { defineConfig, type Plugin } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
 import { featuredProjects, type Project } from './src/data/projects';
 
 async function fetchStars(repo?: string, fallbackStars = 0): Promise<number> {
@@ -25,27 +26,27 @@ async function fetchStars(repo?: string, fallbackStars = 0): Promise<number> {
 
 function generateProjectsHtml(projects: Project[]): string {
   return projects.map((project, index) => `
-    <article class="project-card">
+    <div class="spotlight-card group relative flex flex-col rounded-xl border border-[#3f3f46]/70 bg-[#121215] p-4 sm:p-5 transition-all duration-200 hover:-translate-y-1 hover:border-[#a1a1aa] hover:shadow-lg hover:shadow-white/5">
       ${project.image ? `
-        <a href="${project.url}" target="_blank" rel="noreferrer noopener" class="project-preview" tabindex="-1" aria-hidden="true">
+        <div class="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-[#27272a] bg-[#18181b]">
           <img
             src="${project.image}"
             alt="${project.imageAlt || ''}"
             width="800"
-            height="400"
+            height="450"
             loading="${index === 0 ? 'eager' : 'lazy'}"
             ${index === 0 ? 'fetchpriority="high"' : ''}
             decoding="${index === 0 ? 'sync' : 'async'}"
-            class="project-preview-img ${project.imageFit || 'object-center'}"
+            class="h-full w-full object-cover ${project.imageFit || 'object-center'}"
           />
-        </a>
+        </div>
       ` : ''}
 
-      <div class="project-header">
-        <h3 class="project-title">
-          <a href="${project.url}" target="_blank" rel="noreferrer noopener" class="project-title-link">
+      <div class="mt-4 sm:mt-5 flex flex-wrap items-start justify-between gap-2.5 sm:items-center sm:gap-3">
+        <h3 class="text-base font-semibold text-[#f8fafc] group-hover:text-white transition-colors">
+          <a href="${project.url}" target="_blank" rel="noreferrer noopener" class="inline-flex items-center gap-1.5 hover:underline decoration-white/30 underline-offset-4 focus:outline-none after:absolute after:inset-0 after:z-0">
             <span>${project.title}</span>
-            <svg class="project-external-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <svg class="h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
             </svg>
             <span class="sr-only">(opens in a new tab)</span>
@@ -53,39 +54,39 @@ function generateProjectsHtml(projects: Project[]): string {
         </h3>
 
         ${(typeof project.stars === 'number' && project.stars > 0) ? `
-          <div class="project-stars" aria-label="${project.stars} GitHub stars">
-            <svg class="star-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <a href="https://github.com/${project.repo}" target="_blank" rel="noreferrer noopener" class="relative z-10 inline-flex items-center gap-1.5 rounded-lg border border-[#3f3f46] bg-[#18181b] px-2.5 py-1 text-xs font-medium text-[#e4e4e7] shrink-0 leading-none select-none transition hover:border-[#a1a1aa] hover:text-white" aria-label="Star repository on GitHub: ${project.stars} stars">
+            <svg class="h-3.5 w-3.5 text-amber-400 fill-amber-400 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
             </svg>
-            <span>Star</span>
-            <span class="star-divider" aria-hidden="true"></span>
-            <span class="star-count">${project.stars}</span>
-          </div>
+            <span class="leading-none">Star</span>
+            <span class="h-3 w-[1px] bg-[#3f3f46] self-center"></span>
+            <span data-repo="${project.repo}" class="font-mono text-xs leading-none text-[#a1a1aa] inline-flex items-center">${project.stars}</span>
+          </a>
         ` : ''}
       </div>
 
-      <p class="project-desc">
+      <p class="mt-3 text-xs leading-relaxed text-[#a1a1aa]">
         ${project.description}
       </p>
 
-      <ul class="project-highlights">
+      <ul class="mt-4 space-y-1.5 text-xs text-[#d4d4d8]">
         ${project.highlights.map(highlight => `
-          <li class="project-highlight-item">
-            <span class="project-bullet" aria-hidden="true">•</span>
+          <li class="flex items-start gap-2">
+            <span class="text-[#a1a1aa]">•</span>
             <span>${highlight}</span>
           </li>
         `).join('')}
       </ul>
 
-      <div class="project-tags">
+      <div class="mt-auto pt-5 flex flex-wrap gap-2 font-mono text-xs relative z-10">
         ${project.tags.map(tag => `
-          <span class="project-tag">
-            <img src="${tag.icon}" class="tag-icon" width="14" height="14" loading="lazy" alt="" aria-hidden="true">
+          <span class="inline-flex items-center gap-1.5 rounded border border-[#27272a] bg-[#18181b] px-2.5 py-1 text-[#e4e4e7]">
+            <img src="${tag.icon}" class="h-3.5 w-3.5" width="14" height="14" loading="lazy" alt="" aria-hidden="true">
             <span>${tag.name}</span>
           </span>
         `).join('')}
       </div>
-    </article>
+    </div>
   `).join('');
 }
 
@@ -94,7 +95,7 @@ function prerenderProjects(isBuild: boolean): Plugin {
     name: 'prerender-projects',
     transformIndexHtml: {
       order: 'pre',
-      async handler(html) {
+      async handler(html: string) {
         const projectsWithStars = await Promise.all(
           featuredProjects.map(async (project) => {
             const stars = isBuild
@@ -115,6 +116,7 @@ function prerenderProjects(isBuild: boolean): Plugin {
 
 export default defineConfig(({ command }) => ({
   plugins: [
+    tailwindcss(),
     prerenderProjects(command === 'build'),
   ],
 }));

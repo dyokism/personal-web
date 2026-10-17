@@ -1,3 +1,7 @@
 dist/
 node_modules/
 AGENTS.md
+.env
+.env.*
+*.local
+.DS_Store

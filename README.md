@@ -1,27 +1,20 @@
 <div align="center">
-  <h1>🪨 Dyokism Portfolio</h1>
-  <p><em>Lightweight personal portfolio for Linux/Android systems tooling and native web applications.</em></p>
+  <img src="public/demo.webp" width="96" alt="Dyokism Portfolio">
 
-  <p>
-    <a href="https://bun.sh"><img src="https://img.shields.io/badge/Bun-%23000000.svg?style=flat&logo=bun&logoColor=white" alt="Bun"></a>
-    <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=flat&logo=typescript&logoColor=white" alt="TypeScript"></a>
-    <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white" alt="Vite"></a>
-    <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
-  </p>
+  # Dyokism Portfolio
+  *Minimalist personal developer portfolio with build-time HTML pre-rendering.*
 
-  <p>
-    <a href="#features">Features</a> • <a href="#installation">Installation</a> • <a href="#usage">Usage</a>
-  </p>
+  [Features](#features) • [Installation](#installation) • [Usage](#usage)
 </div>
 
-A minimalist, zero-framework personal portfolio highlighting Linux/Android systems tooling and native web applications. Built with pure modern CSS, strict TypeScript, and self-hosted variable typography.
+A lightweight developer portfolio built with HTML, Tailwind CSS, TypeScript, and Vite. It pre-renders project cards and live GitHub star counts into static HTML during build, eliminating layout shift and third-party rate limits.
 
 ## Features
-- **Zero CSS Framework** - Pure native CSS using custom properties, CSS Grid, and responsive layout without Tailwind runtime dependencies.
-- **Strict TypeScript** - Strongly typed data structures, DOM observers, and build plugins.
-- **Build-Time Static Pre-rendering** - Injects project data directly into static HTML for zero hydration latency and search crawlability.
-- **Self-Hosted Typography** - Variable `.woff2` font files for Outfit and JetBrains Mono with zero external CDN requests.
-- **Accessible Standards** - WCAG 2.2 AA compliant with semantic landmarks, keyboard navigation, and high color contrast.
+- **Build-Time Pre-rendering** - Project cards and live GitHub star counts are baked into static HTML during build for instant loading and zero layout shift.
+- **Strict TypeScript Architecture** - Full type safety across project schemas, DOM observers, spotlight animation routines, and Vite build hooks.
+- **Mobile-First Layout** - Stretched card touch surfaces, high-contrast borders for OLED screens, and 16:9 media framing.
+- **Fine-Pointer Spotlight** - Fluid mouse-tracking spotlight restricted to desktop pointers with reduced-motion compliance.
+- **Production Security Headers** - Preconfigured Content-Security-Policy, HSTS, and frame protections for Vercel deployment.
 
 ## Installation
 ```bash
@@ -29,21 +22,21 @@ A minimalist, zero-framework personal portfolio highlighting Linux/Android syste
 git clone https://github.com/dyokism/portfolio.git
 cd portfolio
 
-# Install dependencies
-npm install
+# Install dependencies via Bun
+bun install
 ```
 
 ## Usage
 ```bash
-# Start local development server
-npm run dev
+# Start local dev server (http://localhost:5173/)
+bun run dev
 
-# Run typecheck
-npm run typecheck
+# Run TypeScript compiler check
+bun run typecheck
 
-# Build production bundle
-npm run build
+# Build production bundle with typecheck
+bun run build
 
-# Preview production build locally
-npm run preview
+# Preview production build locally (http://localhost:4173/)
+bun run preview
 ```
