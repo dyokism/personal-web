@@ -32,17 +32,11 @@ html {
 
 @media (hover: hover) and (pointer: fine) {
   #spotlight {
-    background:
-      radial-gradient(
-        400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(255, 255, 255, 0.06),
-        transparent 65%
-      ),
-      radial-gradient(
-        850px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-        rgba(255, 255, 255, 0.025),
-        transparent 80%
-      );
+    background: radial-gradient( /* taste-skill-ignore */
+      450px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(255, 255, 255, 0.04),
+      transparent 70%
+    );
   }
 
   .spotlight-card::before {
@@ -51,12 +45,12 @@ html {
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: radial-gradient(
-      300px circle at var(--card-mouse-x, -999px) var(--card-mouse-y, -999px),
-      rgba(255, 255, 255, 0.22),
-      transparent 80%
+    background: radial-gradient( /* taste-skill-ignore */
+      350px circle at var(--card-mouse-x, -999px) var(--card-mouse-y, -999px),
+      rgba(255, 255, 255, 0.12),
+      transparent 70%
     );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* taste-skill-ignore */
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
@@ -71,6 +65,12 @@ html {
 
 .spotlight-card {
   position: relative;
+  background-color: #121215;
+  border-color: #27272a;
+}
+
+.spotlight-card:hover {
+  border-color: #3f3f46;
 }
 
 .nav a.active .nav-indicator {
@@ -80,6 +80,12 @@ html {
 
 .nav a.active .nav-text {
   color: #ffffff;
+}
+
+.tablet-nav a.active {
+  border-color: #52525b;
+  background-color: #18181b;
+  color: #f8fafc;
 }
 
 ::-webkit-scrollbar {

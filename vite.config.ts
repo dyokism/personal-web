@@ -26,7 +26,7 @@ async function fetchStars(repo?: string, fallbackStars = 0): Promise<number> {
 
 function generateProjectsHtml(projects: Project[]): string {
   return projects.map((project, index) => `
-    <div class="spotlight-card group relative flex flex-col rounded-xl border border-[#3f3f46]/70 bg-[#121215] p-4 sm:p-5 transition-all duration-200 hover:-translate-y-1 hover:border-[#a1a1aa] hover:shadow-lg hover:shadow-white/5">
+    <div class="spotlight-card group relative flex flex-col rounded-xl border border-[#27272a] bg-[#121215] p-4 sm:p-5 transition-all duration-200 hover:-translate-y-1 hover:border-[#3f3f46] hover:shadow-lg hover:shadow-white/5">
       ${project.image ? `
         <div class="relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-[#27272a] bg-[#18181b]">
           <img
@@ -54,7 +54,7 @@ function generateProjectsHtml(projects: Project[]): string {
         </h3>
 
         ${(typeof project.stars === 'number' && project.stars > 0) ? `
-          <a href="https://github.com/${project.repo}" target="_blank" rel="noreferrer noopener" class="relative z-10 inline-flex items-center gap-1.5 rounded-lg border border-[#3f3f46] bg-[#18181b] px-2.5 py-1 text-xs font-medium text-[#e4e4e7] shrink-0 leading-none select-none transition hover:border-[#a1a1aa] hover:text-white" aria-label="Star repository on GitHub: ${project.stars} stars">
+          <a href="https://github.com/${project.repo}" target="_blank" rel="noreferrer noopener" class="relative z-20 inline-flex items-center gap-1.5 rounded-lg border border-[#3f3f46] bg-[#18181b] px-2.5 py-1 text-xs font-medium text-[#e4e4e7] shrink-0 leading-none select-none transition hover:border-[#a1a1aa] hover:text-white" aria-label="Star ${project.stars} on GitHub">
             <svg class="h-3.5 w-3.5 text-amber-400 fill-amber-400 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
             </svg>
@@ -65,11 +65,11 @@ function generateProjectsHtml(projects: Project[]): string {
         ` : ''}
       </div>
 
-      <p class="mt-3 text-xs leading-relaxed text-[#a1a1aa]">
+      <p class="mt-3 text-sm leading-relaxed text-[#d4d4d8]">
         ${project.description}
       </p>
 
-      <ul class="mt-4 space-y-1.5 text-xs text-[#d4d4d8]">
+      <ul class="mt-4 space-y-1.5 text-sm leading-relaxed text-[#d4d4d8]">
         ${project.highlights.map(highlight => `
           <li class="flex items-start gap-2">
             <span class="text-[#a1a1aa]">•</span>
@@ -78,9 +78,9 @@ function generateProjectsHtml(projects: Project[]): string {
         `).join('')}
       </ul>
 
-      <div class="mt-auto pt-5 flex flex-wrap gap-2 font-mono text-xs relative z-10">
+      <div class="mt-auto pt-5 flex flex-wrap gap-2 text-xs relative z-20">
         ${project.tags.map(tag => `
-          <span class="inline-flex items-center gap-1.5 rounded border border-[#27272a] bg-[#18181b] px-2.5 py-1 text-[#e4e4e7]">
+          <span class="inline-flex min-h-[32px] items-center gap-1.5 rounded border border-[#27272a] bg-[#18181b] px-3 py-1.5 text-[#e4e4e7]">
             <img src="${tag.icon}" class="h-3.5 w-3.5" width="14" height="14" loading="lazy" alt="" aria-hidden="true">
             <span>${tag.name}</span>
           </span>

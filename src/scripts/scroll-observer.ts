@@ -1,7 +1,7 @@
 // Asymmetric rootMargin (-20% top, -60% bottom) focuses detection on upper-middle viewport for accurate section tracking.
 export function initScrollObserver(): void {
   const sections = document.querySelectorAll<HTMLElement>('section[id]');
-  const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav a[href^="#"]');
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav a[href^="#"], .tablet-nav a[href^="#"]');
 
   if (sections.length === 0 || navLinks.length === 0) return;
 
